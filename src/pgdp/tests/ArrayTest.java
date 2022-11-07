@@ -101,4 +101,17 @@ public class ArrayTest {
 		assertEquals("[]", Arrays.toString(intersect(new int[]{-3, -2, -1, 0, 1, 2, 3}, -5)));
 		PinguLib.reset();
 	}
+
+	@Test
+	void test_linearize() {
+		//test für standard Zahlen und zwei Arrays
+		PinguLib.setup();
+		assertArrayEquals(new int[]{-1, 0, 1, 2, 3, 4, 5, 6, 7}, linearize(new int[][]{{-1, 0, 1}, {2, 3, 4, 5, 6}, {7}, {}}));
+		PinguLib.reset();
+
+		//test für leeren Arrays
+		PinguLib.setup();
+		assertArrayEquals(new int[]{}, linearize(new int[][]{{}, {}, {}, {}}));
+		PinguLib.reset();
+	}
 }
