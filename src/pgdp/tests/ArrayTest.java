@@ -51,9 +51,19 @@ public class ArrayTest {
 
 		PinguLib.setup();
 		testArray = new int[]{-3, -2, -1, 0, 1, 2, 3};
-		testArray_r = new int[]{3, 2, 1, 0, -1, -2, -3};
+		testArray_r = new int[testArray.length];
+		for (int i = 0; i < testArray.length / 2; i++) {
+			int temp = testArray[i];
+			testArray_r[i] = testArray[testArray.length - 1 - i];
+			testArray_r[testArray.length - 1 - i] = temp;
+		}
 		invert(testArray);
 		assertArrayEquals(testArray_r, testArray);
 		PinguLib.reset();
+	}
+
+	@Test
+	void test_intersect() {
+
 	}
 }
