@@ -46,14 +46,14 @@ public class ArrayTest {
 		int[] testArray = new int[]{};
 		int[] testArray_r = new int[]{};
 		invert(testArray);
-		assertEquals(testArray_r, testArray);
+		assertArrayEquals(testArray_r, testArray);
 		PinguLib.reset();
 
 		PinguLib.setup();
 		testArray = new int[]{-3, -2, -1, 0, 1, 2, 3};
 		testArray_r = new int[]{3, 2, 1, 0, -1, -2, -3};
 		invert(testArray);
-		assertEquals(testArray_r, testArray);
+		assertArrayEquals(testArray_r, testArray);
 		PinguLib.reset();
 	}
 }
