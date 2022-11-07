@@ -26,4 +26,17 @@ public class ArrayTest {
 		assertEquals("{-3, -2, -1, 0, 1, 2, 3}", PinguLib.getConsoleOutput());
 		PinguLib.reset();
 	}
+
+	@Test
+	void test_minAndMax() {
+		PinguLib.setup();
+		minAndMax(new int[]{});
+		assertEquals("{}", PinguLib.getConsoleOutput());
+		PinguLib.reset();
+
+		PinguLib.setup();
+		minAndMax(new int[]{-3, -2, -1, 0, 1, 2, 3});
+		assertEquals("Minimum = " + "-3" + ", Maximum = " + "3", PinguLib.getConsoleOutput());
+		PinguLib.reset();
+	}
 }
