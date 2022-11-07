@@ -17,8 +17,8 @@ public class ArrayTest {
 	@Test
 	void test_print() {
 		PinguLib.setup();
-		print(new int[]{123, Integer.MAX_VALUE, -2312});
-		assertEquals("{123, 2147483647, -2312}", PinguLib.getConsoleOutput());
+		print(new int[]{123 + 23, Integer.MAX_VALUE, -2312});
+		assertEquals("{146, 2147483647, -2312}", PinguLib.getConsoleOutput());
 		PinguLib.reset();
 	}
 }
