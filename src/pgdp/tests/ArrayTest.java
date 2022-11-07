@@ -90,5 +90,10 @@ public class ArrayTest {
 		PinguLib.setup();
 		assertEquals("[-3, -2, -1, 0, 1, 2, 3, 0, 0]", Arrays.toString(intersect(new int[]{-3, -2, -1, 0, 1, 2, 3}, 9)));
 		PinguLib.reset();
+
+		//test mit leerem Array, Länge ist größer als Array
+		PinguLib.setup();
+		assertEquals("[0, 0, 0]", Arrays.toString(intersect(new int[]{}, 3)));
+		PinguLib.reset();
 	}
 }
