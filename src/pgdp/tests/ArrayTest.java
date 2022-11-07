@@ -95,5 +95,10 @@ public class ArrayTest {
 		PinguLib.setup();
 		assertEquals("[]", Arrays.toString(intersect(new int[]{}, 0)));
 		PinguLib.reset();
+
+		//test mit standard integern inkl. negative, Länge ist negativ
+		PinguLib.setup();
+		assertEquals("[]", Arrays.toString(intersect(new int[]{-3, -2, -1, 0, 1, 2, 3}, -5)));
+		PinguLib.reset();
 	}
 }
