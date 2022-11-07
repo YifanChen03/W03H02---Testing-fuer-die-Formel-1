@@ -11,6 +11,7 @@ import static pgdp.array.Array.bubbleSort;
 import org.junit.jupiter.api.Test;
 import pgdp.PinguLib;
 import pgdp.array.ArrayInterface;
+import java.util.Arrays;
 
 public class ArrayTest {
 
@@ -77,16 +78,16 @@ public class ArrayTest {
 	void test_intersect() {
 		//beispiel von Übungsaufgabe
 		PinguLib.setup();
-		assertEquals("[1, 2]", intersect(new int[]{1, 2, 3}, 2));
+		assertEquals("[1, 2]", Arrays.toString(intersect(new int[]{1, 2, 3}, 2)));
 		PinguLib.reset();
 
 		//test mit standard integern inklusive negative Zahlen
 		PinguLib.setup();
-		assertEquals("[-3, -2, -1, 0, 1]", intersect(new int[]{-3, -2, -1, 0, 1, 2, 3}, 5));
+		assertEquals("[-3, -2, -1, 0, 1]", Arrays.toString(intersect(new int[]{-3, -2, -1, 0, 1, 2, 3}, 5)));
 		PinguLib.reset();
 
 		//test mit standard integern inkl. negative, Länge ist größer als Array
 		PinguLib.setup();
-		assertEquals("[-3, -2, -1, 0, 1, 2, 3, 0 ,0]", intersect(new int[]{-3, -2, -1, 0, 1, 2, 3}, 9));
+		assertEquals("[-3, -2, -1, 0, 1, 2, 3, 0 ,0]", Arrays.toString(intersect(new int[]{-3, -2, -1, 0, 1, 2, 3}, 9)));
 	}
 }
