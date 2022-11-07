@@ -87,8 +87,8 @@ public class ArrayTest {
 		PinguLib.reset();
 
 		//test mit standard integern inkl. negative, Länge ist größer als Array
-		PinguLib.setup();
+		/*PinguLib.setup();
 		assertEquals("[-3, -2, -1, 0, 1, 2, 3, 0 ,0]", Arrays.toString(intersect(new int[]{-3, -2, -1, 0, 1, 2, 3}, 9)));
-		PinguLib.reset();
+		PinguLib.reset();*/
 	}
 }
