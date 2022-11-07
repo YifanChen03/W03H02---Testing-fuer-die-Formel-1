@@ -20,5 +20,10 @@ public class ArrayTest {
 		print(new int[]{});
 		assertEquals("{}", PinguLib.getConsoleOutput());
 		PinguLib.reset();
+
+		PinguLib.setup();
+		print(new int[]{-3, -2, -1, 0, 1, 2, 3});
+		assertEquals("{-3, -2, -1, 0, 1, 2, 3}", PinguLib.getConsoleOutput());
+		PinguLib.reset();
 	}
 }
