@@ -76,11 +76,6 @@ public class ArrayTest {
 
 	@Test
 	void test_intersect() {
-		//beispiel von Übungsaufgabe
-		PinguLib.setup();
-		assertEquals("[1, 2]", Arrays.toString(intersect(new int[]{1, 2, 3}, 2)));
-		PinguLib.reset();
-
 		//test mit standard integern inklusive negative Zahlen
 		PinguLib.setup();
 		assertEquals("[-3, -2, -1, 0, 1]", Arrays.toString(intersect(new int[]{-3, -2, -1, 0, 1, 2, 3}, 5)));
@@ -94,6 +89,11 @@ public class ArrayTest {
 		//test mit leerem Array, Länge ist größer als Array
 		PinguLib.setup();
 		assertEquals("[0, 0, 0]", Arrays.toString(intersect(new int[]{}, 3)));
+		PinguLib.reset();
+
+		//test mit leerem Array, Länge ist 0
+		PinguLib.setup();
+		assertEquals("[]", Arrays.toString(intersect(new int[]{}, 0)));
 		PinguLib.reset();
 	}
 }
