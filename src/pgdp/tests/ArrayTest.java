@@ -31,7 +31,7 @@ public class ArrayTest {
 	void test_minAndMax() {
 		PinguLib.setup();
 		minAndMax(new int[]{});
-		assertEquals("{}", PinguLib.getConsoleOutput());
+		assertEquals("", PinguLib.getConsoleOutput());
 		PinguLib.reset();
 
 		PinguLib.setup();
