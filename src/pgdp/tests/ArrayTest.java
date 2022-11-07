@@ -44,7 +44,12 @@ public class ArrayTest {
 	void test_invert() {
 		PinguLib.setup();
 		int[] testArray = new int[]{};
-		int[] testArray_r = new int[]{};
+		int[] testArray_r = new int[testArray.length];
+		for (int i = 0; i < testArray.length / 2; i++) {
+			int temp = testArray[i];
+			testArray_r[i] = testArray[testArray.length - 1 - i];
+			testArray_r[testArray.length - 1 - i] = temp;
+		}
 		invert(testArray);
 		assertArrayEquals(testArray_r, testArray);
 		PinguLib.reset();
