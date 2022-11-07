@@ -16,11 +16,13 @@ public class ArrayTest {
 
 	@Test
 	void test_print() {
+		//test für leeres Array
 		PinguLib.setup();
 		print(new int[]{});
 		assertEquals("{}", PinguLib.getConsoleOutput());
 		PinguLib.reset();
 
+		//test für standard integer inklusive negative Werte
 		PinguLib.setup();
 		print(new int[]{-3, -2, -1, 0, 1, 2, 3});
 		assertEquals("{-3, -2, -1, 0, 1, 2, 3}", PinguLib.getConsoleOutput());
@@ -29,11 +31,13 @@ public class ArrayTest {
 
 	@Test
 	void test_minAndMax() {
+		//test für leeres Array
 		PinguLib.setup();
 		minAndMax(new int[]{});
 		assertEquals("", PinguLib.getConsoleOutput());
 		PinguLib.reset();
 
+		//test für standard integer inklusive negative Werte
 		PinguLib.setup();
 		minAndMax(new int[]{-3, -2, -1, 0, 1, 2, 3});
 		assertEquals("Minimum = " + "-3" + ", Maximum = " + "3", PinguLib.getConsoleOutput());
@@ -42,6 +46,7 @@ public class ArrayTest {
 
 	@Test
 	void test_invert() {
+		//test für leeres Array
 		PinguLib.setup();
 		int[] testArray = new int[]{};
 		int[] testArray_r = new int[testArray.length];
@@ -54,6 +59,7 @@ public class ArrayTest {
 		assertArrayEquals(testArray_r, testArray);
 		PinguLib.reset();
 
+		//test für standard integer inklusive negative Zahlen
 		PinguLib.setup();
 		testArray = new int[]{-3, -2, -1, 0, 1, 2, 3};
 		testArray_r = new int[testArray.length];
@@ -69,6 +75,18 @@ public class ArrayTest {
 
 	@Test
 	void test_intersect() {
+		//beispiel von Übungsaufgabe
+		PinguLib.setup();
+		assertEquals("1, 2", intersect(new int[]{1, 2, 3}, 2));
+		PinguLib.reset();
 
+		//test mit standard integern inklusive negative Zahlen
+		PinguLib.setup();
+		assertEquals("-3, -2, -1, 0, 1", intersect(new int[]{-3, -2, -1, 0, 1, 2, 3}, 5));
+		PinguLib.reset();
+
+		//test mit standard integern inkl. negative, Länge ist größer als Array
+		PinguLib.setup();
+		assertEquals("-3, -2, -1, 0, 1, 2, 3, 0 ,0", intersect(new int[]{-3, -2, -1, 0, 1, 2, 3}, 9));
 	}
 }
